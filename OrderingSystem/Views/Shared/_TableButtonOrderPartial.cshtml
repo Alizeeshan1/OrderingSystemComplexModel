@@ -1,0 +1,17 @@
+﻿@model int
+
+<td class="align-items-md-center">
+    <div class="btn-group" role="group">
+        <a asp-route-id="@Model" asp-action="EditOrder" type="button" class="btn btn-secondary" > Edit</a>
+        &nbsp;
+        <a asp-route-id="@Model" asp-action="EditOrderItem" type="button" class="btn btn-secondary" >Edit Order</a>
+        &nbsp;
+        <a asp-route-id="@Model" asp-action="AddItems" type="button" class="btn btn-success" >Add Items</a>
+        &nbsp;
+        <form method="post" asp-action="Delete">
+            <a asp-action="Delete" asp-route-id="@Model" class="btn btn-danger" onclick="if(!confirm('Are you Sure to Delete')){ return false}" type="submit">
+               &nbsp;Delete
+            </a>
+        </form>
+    </div>
+</td>
